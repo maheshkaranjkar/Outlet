@@ -34,7 +34,6 @@ public class ReadCsvUtil {
                     .build();
 
             List<Outlet> outlets = csvToBean.parse();
-            log.info("outlets ::" +outlets);
             List<Outlet> distinctOutlets = outlets.stream().distinct().collect(Collectors.toList());
             return distinctOutlets;
 		} catch (IOException e) {
